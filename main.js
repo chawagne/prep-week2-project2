@@ -5,8 +5,8 @@
 Below are a number of problems for you to solve
 using JS. The JS code can be written below each
 problem and the results can be displayed into the
-HTML page. In some cases, you may want to check 
-within the console for verification of the array. 
+HTML page. In some cases, you may want to check
+within the console for verification of the array.
 
 console.log();
 
@@ -24,35 +24,36 @@ document.getElementById("q0").classList.add("status-good");
 
 // 1. Declare a variable whose value is an empty array.
 //    Use any method you choose to add at least 4 items to it.
-
+var gizmo = [];
+gizmo.push("woofer", "friend", "buddy", "pupper");
 
 
 
 
 
 // 2. Add an additional item to the beginning of your array.
-
+gizmo.unshift("doggo");
 
 
 
 
 
 // 3. Remove the second and third items in your array.
-
+gizmo.splice(1,2);
 
 
 
 
 
 // 4. Add two new items after the second item.
-
+gizmo.splice(2,0,"lil' guy","dogzo");
 
 
 
 
 
 // 5. Log to the console: 'The current length of the array is....' using the .length method
-
+console.log("The current length of the array is " + gizmo.length);
 
 
 
@@ -63,7 +64,7 @@ document.getElementById("q0").classList.add("status-good");
 var things = ['mug', 'book', 'mouse', 'plant', 'sunglasses'];
 
 // 6. Change 'mouse' to 'keyboard'
-
+things[3] = 'keyboard';
 
 
 
@@ -71,14 +72,14 @@ var things = ['mug', 'book', 'mouse', 'plant', 'sunglasses'];
 
 // 7. Combine all of the elements of the array into a string.
 //    (Hint: check out the 'join' method.)
-
+thingsString = things.join(',');
 
 
 
 
 
 // 8. Remove the first item.
-
+things.shift();
 
 
 
@@ -87,7 +88,7 @@ var things = ['mug', 'book', 'mouse', 'plant', 'sunglasses'];
 
 
 // 9. Remove all items from the things array.
-
+things.splice(0,4);
 
 
 
@@ -98,7 +99,7 @@ var things = ['mug', 'book', 'mouse', 'plant', 'sunglasses'];
 var people = ['Bill', 'Ted', 'Emily', 'Andrea', 'Doug'];
 
 // 10. Arrange the items alphabetically. Store this Array as orderedPeople
-
+orderedPeople = people.sort();
 
 
 
@@ -106,9 +107,10 @@ var people = ['Bill', 'Ted', 'Emily', 'Andrea', 'Doug'];
 
 
 // 11. Create an array of arrays with the following three arrays:
-var array1 = ["Fido", "Spot", "Rex", "Sparky"]
-var array2 = ["Bulldog", "Lab", "Dalmation", "Beagle"]
-var array3 = ["White", "Black", "Spotted", "Tri-color"]
+var array1 = ["Fido", "Spot", "Rex", "Sparky"];
+var array2 = ["Bulldog", "Lab", "Dalmation", "Beagle"];
+var array3 = ["White", "Black", "Spotted", "Tri-color"];
+var arrayTest= [array1,array2,array3];
 
 // Goal:
 var array4 = [
@@ -124,6 +126,8 @@ var array4 = [
 
 
 // 12. Remove "Sparky" and "White" from the above array of arrays.
+arrayTest[0].splice(3,1);
+arrayTest[2].splice(0,1);
 
 
 
@@ -136,13 +140,15 @@ var array4 = [
 var campingItems = ['tent', 'hiking boots', 'picnic table', 'corn on the cob', 'cooler'];
 
 // 13. Declare an array called lastItem using .pop() on the campingItems array.
-
+var lastItem = [campingItems.pop()];
 
 
 
 
 
 // 14. Add two new items to lastItem, one at the beginning and one at the end.
+lastItem.push("beer");
+lastItem.unshift("flashlight");
 
 
 
@@ -150,7 +156,7 @@ var campingItems = ['tent', 'hiking boots', 'picnic table', 'corn on the cob', '
 
 
 // 15. Add s'mores to the lastItem array.
-
+lastItem.push("s'mores")
 
 
 
@@ -158,7 +164,8 @@ var campingItems = ['tent', 'hiking boots', 'picnic table', 'corn on the cob', '
 
 // 16. Create a new Array called reversedItems.
 //    The items should be the same as lastItem, only in reverse order.
-
+var reversedItems = lastItem.slice();
+reversedItems.reverse();
 
 
 
@@ -167,6 +174,7 @@ var campingItems = ['tent', 'hiking boots', 'picnic table', 'corn on the cob', '
 //     called numberPets whose value is [12, 5, 9, 27, 'fish', 'dog']
 var firstArray = [12, 5, 9, 27];
 var secondArray = ['fish', 'dog'];
+var numberPets = [firstArray[0], firstArray[1], firstArray[2], firstArray[3], secondArray[0], secondArray[1]];
 
 
 
@@ -175,7 +183,9 @@ var secondArray = ['fish', 'dog'];
 // 18: Try to arrange the following items from smallest to largest:
 var sortingNumbers = [2, 5, 98, 55, 77, 300];
 // If it doesn't sort as expected, explain why.
-
+sortingNumbers.sort(function(a, b) {
+  return a - b
+});
 
 
 
@@ -188,11 +198,11 @@ var sortingNumbers = [2, 5, 98, 55, 77, 300];
 
 /* SANDBOX TRACK
 
-Solving all of these problems is a great step in the right direction, 
-but the next step is coming up with your own arrangements to solve 
+Solving all of these problems is a great step in the right direction,
+but the next step is coming up with your own arrangements to solve
 new problems. Practice creating your own problems to solve and their solutions -
-you can even challenge your classmates! 
- 
-Also, consider how you can add/remove CSS styles to create added presentation with the results. 
+you can even challenge your classmates!
+
+Also, consider how you can add/remove CSS styles to create added presentation with the results.
 
 */
